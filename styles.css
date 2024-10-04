@@ -24,6 +24,11 @@
     box-sizing: border-box;
 }
 
+h2 {
+    font-size: 20px;
+    text-align: start;
+}
+
 body {
     background-color: var(--color-w1);
     font-family: "DM Sans", system-ui;
