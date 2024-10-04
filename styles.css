@@ -1,0 +1,75 @@
+:root {
+    --color-p1: hsl(254, 88%, 90%);
+    --color-p2: hsl(256, 67%, 59%);
+    --color-y1: hsl(31, 66%, 93%);
+    --color-y2: hsl(39, 100%, 71%);
+    --color-w1: hsl(0, 0%, 100%);
+    --color-b2: hsl(0, 0%, 7%);
+
+    /* BREAKPOINTS */
+    --mb: 375px;
+    --dskp: 1440px;
+
+    /* FONT SIZE */
+    --fonts-paragraph: 18px;
+
+    /* FONT WEIGHT */
+    --font-weight-1: 400;
+    --font-weight-2: 500;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--color-w1);
+    font-family: "DM Sans", system-ui;
+}
+
+.container-bentogrid {
+    background-color: var(--color-w1);
+    width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+
+    .container_1 {
+        background-color: var(--color-p2);
+        width: 350px;
+        height: 300px;
+        margin: 50px auto 0;
+        border-radius: 10px;
+
+        h1 {
+            font-size: 40px;
+            color: var(--color-w1);
+            white-space: collapse balance;
+            font-weight: var(--font-weight-1);
+            padding: 25px 0;
+
+            .c1__span1 {
+                color: var(--color-y2);
+            }
+
+            .c1__span2 {
+                font-style: italic;
+            }
+        }
+
+        p {
+            font-size: 18px;
+            color: var(--color-p1);
+        }
+
+        img {
+            width: 180px;
+        }
+    }
+}
+
+img {
+    width: 300px;
+}
