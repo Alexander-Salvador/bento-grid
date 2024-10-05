@@ -27,6 +27,7 @@
 h2 {
     font-size: 20px;
     text-align: start;
+    /* text-spacing-trim: auto; */
 }
 
 body {
@@ -34,26 +35,47 @@ body {
     font-family: "DM Sans", system-ui;
 }
 
+img {
+    width: 250px;
+}
+
+.container_1,
+.container_2,
+.container_3,
+.container_4,
+.container_5,
+.container_6,
+.container_7,
+.container_8 {
+    max-width: 350px;
+    display: grid;
+}
+
+/* MOBILE FIRST */
+
+
+
 .container-bentogrid {
     background-color: var(--color-w1);
-    width: 400px;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
+    min-width: 375px;
+    display: grid;
+    place-content: center;
+    justify-items: center;
 
     .container_1 {
         background-color: var(--color-p2);
-        width: 350px;
         height: 300px;
-        margin: 50px auto 0;
+        margin: 50px 0 40px;
         border-radius: 10px;
+        align-content: center;
+        justify-items: center;
 
         h1 {
             font-size: 40px;
             color: var(--color-w1);
             white-space: collapse balance;
             font-weight: var(--font-weight-1);
-            padding: 25px 0;
+            text-align: center;
 
             .c1__span1 {
                 color: var(--color-y2);
@@ -65,7 +87,7 @@ body {
         }
 
         p {
-            font-size: 18px;
+            font-size: 16px;
             color: var(--color-p1);
         }
 
@@ -73,8 +95,162 @@ body {
             width: 180px;
         }
     }
+
+    .container_2 {
+        background-color: var(--color-w1);
+        margin-bottom: 40px;
+
+        img {
+            width: 270px;
+        }
+
+        h2 {
+            padding-left: 15px;
+        }
+    }
+
+    .container_3 {
+        background-color: var(--color-y2);
+        border-radius: 10px;
+        text-align: start;
+        height: 210px;
+        overflow: hidden;
+        margin-bottom: 40px;
+
+        h2 {
+            padding: 15px 15px;
+            font-weight: 600;
+        }
+
+        img {
+            width: 200px;
+            padding-left: 15px;
+        }
+    }
+
+    .container_4 {
+        background-color: var(--color-p1);
+        margin-bottom: 40px;
+        border-radius: 10px;
+
+        h2 {
+            padding: 15px;
+            font-size: 21px;
+            text-align: center;
+        }
+
+        img {
+            width: 250px;
+        }
+
+        p {
+            font-weight: 600;
+            padding: 20px;
+        }
+    }
+
+    .container_5 {
+        background-color: var(--color-p2);
+        border-radius: 10px;
+        margin-bottom: 40px;
+
+        img {
+            padding: 20px 30px 20px 30px;
+            width: 280px;
+        }
+
+        h2 {
+            text-align: center;
+            font-size: 28px;
+            font-weight: 500;
+            padding: 20px;
+            color: var(--color-w1);
+            line-height: 25px;
+        }
+    }
+
+    .container_6 {
+        background-color: var(--color-w1);
+        border-radius: 10px;
+        margin-bottom: 40px;
+        text-align: start;
+
+        h2 {
+            font-size: 35px;
+            padding-left: 30px;
+        }
+
+        p {
+            font-weight: 500;
+            padding-left: 30px;
+        }
+
+        img {
+            width: 150px;
+            margin-top: 20px;
+            padding-left: 30px;
+        }
+    }
+
+    .container_7 {
+        background-color: var(--color-y1);
+        border-radius: 10px;
+        margin-bottom: 40px;
+        text-align: start;
+
+        h2 {
+            padding: 20px 30px;
+            font-size: 22px;
+            font-weight: 700;
+            line-height: 24px;
+
+            span {
+                color: var(--color-p2);
+                font-style: italic;
+            }
+        }
+
+        img {
+            width: 200px;
+            padding-left: 30px;
+        }
+    }
+
+    .container_8 {
+        background-color: var(--color-y2);
+        border-radius: 10px;
+        margin-bottom: 40px;
+        text-align: start;
+
+        h2 {
+            padding: 20px 30px;
+            font-size: 25px;
+        }
+
+        img {
+            width: 220px;
+            padding-left: 30px;
+            padding-bottom: 20px;
+        }
+    }
 }
 
-img {
-    width: 300px;
+@media (width >=450px) {
+
+    .container-bentogrid {
+        background-color: var(--color-w1);
+        max-width: 1200px;
+    }
+
+    .container_1,
+    .container_2,
+    .container_3,
+    .container_4,
+    .container_5,
+    .container_6,
+    .container_7,
+    .container_8 {
+        min-width: 800px;
+        display: grid;
+    }
 }
