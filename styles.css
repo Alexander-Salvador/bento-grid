@@ -51,9 +51,8 @@ img {
     display: grid;
 }
 
+
 /* MOBILE FIRST */
-
-
 
 .container-bentogrid {
     background-color: var(--color-w1);
@@ -239,7 +238,9 @@ img {
 
     .container-bentogrid {
         background-color: var(--color-w1);
-        max-width: 1200px;
+        /* max-width: 1200px; */
+        display: grid;
+        justify-content: center;
     }
 
     .container_1,
@@ -252,5 +253,6 @@ img {
     .container_8 {
         min-width: 800px;
         display: grid;
+        justify-content: center;
     }
 }
