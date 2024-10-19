@@ -34,9 +34,9 @@ body {
     font-family: "DM Sans", system-ui;
 }
 
-img {
+/* img {
     width: 250px;
-}
+} */
 
 
 /* MOBILE FIRST */
@@ -57,21 +57,21 @@ img {
     margin-top: 30px;
     margin-bottom: 30px;
     grid-template-areas:
-        "1"
-        "2"
-        "3"
-        "4"
-        "5"
-        "6"
-        "7"
-        "8"
+        "uno"
+        "dos"
+        "tres"
+        "cuatro"
+        "cinco"
+        "seis"
+        "siete"
+        "ocho"
     ;
 
     .container_1 {
         background-color: var(--color-p2);
         padding: 40px 30px;
         border-radius: 10px;
-        grid-area: 1;
+        grid-area: uno;
         text-align: center;
 
         h1 {
@@ -107,7 +107,7 @@ img {
 
     .container_2 {
         background-color: var(--color-w1);
-        grid-area: 2;
+        grid-area: dos;
 
         img {
             width: 270px;
@@ -123,17 +123,18 @@ img {
         background-color: var(--color-y2);
         border-radius: 10px;
         text-align: start;
-        height: 210px;
+        height: 220px;
         overflow: hidden;
-        grid-area: 3;
+        grid-area: tres;
 
         h2 {
+            font-size: 23px;
             padding: 15px 15px;
             font-weight: 600;
         }
 
         img {
-            width: 200px;
+            width: 220px;
             padding-left: 15px;
         }
     }
@@ -141,28 +142,31 @@ img {
     .container_4 {
         background-color: var(--color-p1);
         border-radius: 10px;
-        grid-area: 4;
+        grid-area: cuatro;
+        text-align: center;
+        /* padding: 15px; */
 
         h2 {
-            padding: 15px;
+            padding: 20px 15px;
             font-size: 21px;
             text-align: center;
+            font-weight: 600;
         }
 
         img {
-            width: 250px;
+            width: 290px;
         }
 
         p {
             font-weight: 600;
-            padding: 20px;
+            padding: 15px 30px;
         }
     }
 
     .container_5 {
         background-color: var(--color-p2);
         border-radius: 10px;
-        grid-area: 5;
+        grid-area: cinco;
 
         img {
             padding: 20px 30px 20px 30px;
@@ -183,22 +187,22 @@ img {
         background-color: var(--color-w1);
         border-radius: 10px;
         text-align: start;
-        grid-area: 6;
+        grid-area: seis;
+        padding-left: 20px;
 
         h2 {
-            font-size: 35px;
-            padding-left: 30px;
+            font-size: 50px;
+            font-weight: 600;
         }
 
         p {
+            font-size: 20px;
             font-weight: 500;
-            padding-left: 30px;
         }
 
         img {
-            width: 150px;
+            width: 200px;
             margin-top: 20px;
-            padding-left: 30px;
         }
     }
 
@@ -206,7 +210,7 @@ img {
         background-color: var(--color-y1);
         border-radius: 10px;
         text-align: start;
-        grid-area: 7;
+        grid-area: siete;
 
         h2 {
             padding: 20px 30px;
@@ -230,11 +234,12 @@ img {
         background-color: var(--color-y2);
         border-radius: 10px;
         text-align: start;
-        grid-area: 8;
+        grid-area: ocho;
 
         h2 {
             padding: 20px 30px;
             font-size: 25px;
+            line-height: 1em;
         }
 
         img {
@@ -244,3 +249,78 @@ img {
         }
     }
 }
+
+@media (width >=785px) {
+    .container-bentogrid {
+        background-color: var(--color-w1);
+        max-width: 1480px;
+        /* margin: 0 auto; */
+        display: grid;
+        justify-content: center;
+    }
+
+    .container-section {
+        background-color: var(--color-w1);
+        min-width: 1225px;
+        display: grid;
+        /* margin: 0 auto; */
+        grid-template-columns: repeat(4, 10em);
+        grid-template-rows: 9em 5em 5em 9em;
+        gap: 15px;
+        grid-template-areas:
+            "siete uno uno cuatro"
+            "siete dos tres cuatro"
+            "ocho dos tres cuatro"
+            "ocho seis cinco cinco";
+
+        .container_1 {
+            grid-area: uno;
+            display: grid;
+            /* height: 200px; */
+
+
+        }
+
+        .container_2 {
+            grid-area: dos;
+            /* height: 200px; */
+        }
+
+        .container_3 {
+            grid-area: tres;
+            /* height: 200px; */
+        }
+
+        .container_4 {
+            grid-area: cuatro;
+            /* height: 200px; */
+        }
+
+        .container_5 {
+            grid-area: cinco;
+            /* height: 200px; */
+        }
+
+        .container_6 {
+            grid-area: seis;
+            /* height: 200px; */
+        }
+
+        .container_7 {
+            grid-area: siete;
+            display: grid;
+            /* height: 200px; */
+        }
+
+        .container_8 {
+            grid-area: ocho;
+            /* height: 200px; */
+        }
+    }
+}
+
+/* 
+
+Se puede agregar 5 filas para que autocomplete el tamaño. */
+
+/* o se puede utilizar el heigh para cada container */
